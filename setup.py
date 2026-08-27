@@ -13,6 +13,7 @@ if os.name == 'nt':
     extra_compile_args.append("-O2")
 
 extensions = [
+    Extension("api_worker_core", ["api_worker_core.pyx"], define_macros=define_macros, extra_compile_args=extra_compile_args),
     Extension("alterar_voz_core", ["alterar_voz_core.pyx"], define_macros=define_macros, extra_compile_args=extra_compile_args),
     Extension("sync_assets_core", ["sync_assets_core.pyx"], define_macros=define_macros, extra_compile_args=extra_compile_args),
     Extension("search_visuals_core", ["search_visuals_core.pyx"], define_macros=define_macros, extra_compile_args=extra_compile_args),
