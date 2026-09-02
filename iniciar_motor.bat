@@ -10,4 +10,4 @@ echo Aguardando conexoes na porta 8001...
 echo Pressione CTRL+C para encerrar.
 
 :: Inicia o servidor Web usando o Python portatil
-.\python_embed\python.exe -m uvicorn api_worker:app --host 0.0.0.0 --port 8001 --reload
+.\python_embed\python.exe -m uvicorn api_worker:app --host 0.0.0.0 --port 8001
