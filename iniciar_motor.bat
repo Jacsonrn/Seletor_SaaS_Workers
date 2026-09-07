@@ -14,7 +14,7 @@ if %errorlevel% neq 0 (
         echo [INFO] Instalando Git silenciosamente (Pode levar 1-2 minutos)...
         Git-Installer.exe /VERYSILENT /NORESTART /NOCANCEL /SP- /SUPPRESSMSGBOXES
         del Git-Installer.exe
-        :: Adiciona o Git ao PATH temporario para esse script nao falhar no primeiro uso
+        REM Adiciona o Git ao PATH temporario para esse script nao falhar no primeiro uso
         set "PATH=%PATH%;C:\Program Files\Git\cmd"
         echo [OK] Git instalado e configurado!
     ) else (
@@ -30,3 +30,7 @@ echo Pressione CTRL+C para encerrar.
 
 :: Inicia o servidor Web usando o Python portatil
 .\python_embed\python.exe -m uvicorn api_worker:app --host 0.0.0.0 --port 8001
+
+echo.
+echo [ERRO] O Motor parou inesperadamente!
+pause
